@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "linlinger.heartstealer.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"GuiHeartsMixin",
+		"GuiArmorMixin",
+		"GuiSpritesAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

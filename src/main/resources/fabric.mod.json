@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "heartstealer",
+	"version": "${version}",
+	"name": "HeartStealer",
+	"description": "夺心者 —— 开局只有半颗心,击杀生物夺取生命与力量,越战越强!",
+	"authors": [
+		"linlinger"
+	],
+	"contact": {
+		"homepage": "https://github.com/YOUR_USERNAME/HeartStealer",
+		"sources": "https://github.com/YOUR_USERNAME/HeartStealer"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/heartstealer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"linlinger.heartstealer.Heartstealer"
+		],
+		"client": [
+			"linlinger.heartstealer.client.HeartstealerClient"
+		],
+		"modmenu": [
+			"linlinger.heartstealer.config.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"heartstealer.mixins.json",
+		{
+			"config": "heartstealer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": ">=15.0.0"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"colorfulhearts": "*"
+	}
+}
